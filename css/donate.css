@@ -1,0 +1,26 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.donation-form-1
+{
+    display: flex;
+    box-shadow: 0 1px 10px 3px  rgb(148, 148, 148,0.3);
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    border-radius:10px ;
+}
+.footer-1
+{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.duration,.timing,.month
+{
+    margin-left:-10px ;
+}

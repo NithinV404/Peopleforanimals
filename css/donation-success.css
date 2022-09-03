@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'FugazOne-Regular';
+    src:url(../fonts/FugazOne-Regular.ttf) format('truetype');
+}
+div
+{
+    position: relative;
+    top: 50%;
+    font-family: 'FugazOne-Regular';
+    font-size: 1.5rem;
+    color: #545c64;
+}
