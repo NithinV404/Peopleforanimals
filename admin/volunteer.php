@@ -11,12 +11,13 @@ if (strlen($_SESSION['zmsaid']==0)) {
 $aid=$_SESSION['zmsaid'];
  $pagetitle=$_POST['pagetitle'];
 $pagedes=$_POST['pagedes'];
+$fpagedes = mysqli_real_escape_string($con,$pagedes);
 
- $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='volunteer'");
+ $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$fpagedes' where  PageType='volunteer'");
 
     if ($query) {
     
-    echo '<script>alert("About Us has been updated.")</script>';
+    echo '<script>alert("Volunteer has been updated.")</script>';
   }
   else
     {

@@ -23,6 +23,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    position: absolute;
    left: -5%;
 }
+#donate-button
+{
+    color:#5ae906;
+    border:2px solid #5ae906; 
+    border-radius:10px;
+    transition: ease-out 500ms;
+    transform-origin: center;
+    margin-left: 10px;
+}
+#donate-button:hover
+{
+    background-color: #5ae906;
+    color:#545C64;
+}
 iframe
 {
     border-radius: 5px;
@@ -201,7 +215,7 @@ body{
     padding: 0px 0;
     border: 1px solid #fff;
     text-align: center;
-    left: -34px;
+    left: -26px;
 }
 .navbar-default {
      border-color: #fff!important;
@@ -1070,7 +1084,7 @@ img.zoom-img:hover {
 }
 .welcome-grid {
     float: left;
-    width: 50%;
+    width: 100%;
 }
 .welcome-grid:nth-child(3) {
     margin-top: 1em;
@@ -1340,6 +1354,7 @@ img.zoom-img:hover {
 .header-banner {
     background: url(../images/banner.jpg) no-repeat -180px 0px;
     background-size: cover;
+    background-position: center;
 }
 .head-banner {
     margin: 0 auto;

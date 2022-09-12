@@ -5,9 +5,11 @@ error_reporting(0);
 include('includes/dbconnection.php');
 ?>
 <!DOCTYPE HTML>
-<meta content="width=device-width, initial-scale=1" name="viewport" />
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People for animals | Animal Detail</title>
 <link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">

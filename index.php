@@ -7,8 +7,10 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People for Animals | Home Page</title>
-<link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 <link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -122,9 +124,9 @@ include('includes/dbconnection.php');
 				
 						<!--events-->
 						<!--specials-->
-				 <?php include_once('includes/special.php');?>
+				 <?php require_once('includes/special.php');?>
 			</div>
 			<!--footer-->
-			<?php include_once('includes/footer.php');?>
+			<?php require_once('includes/footer.php');?>
 </body>
 </html>

@@ -29,12 +29,12 @@
                                     <li><a href="about.php">About</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                     <li><a href="animals.php">Animals</a></li>
-                                    <li><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >Services</a>
+                                    <li><a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="border-radius:10px">Join us <img src="./svg/caret_down_icon.svg" height=20 width=10 style="padding-bottom:3px;"></a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a style="display:inline-block; margin-top:5px;"class="dropdown-item" href="donate.php">Donations</a><br>
                                         <a style="display:inline-block; margin-top:5px;" class="dropdown-item" href="volunteer.php">Volunteers</a><br>
-                                        <a style="display:inline-block; margin-top:5px;" class="dropdown-item" href="health-care.php">Health care</a>
+                                        <a style="display:inline-block; margin-top:5px;" class="dropdown-item" href="health-care.php">Health care</a><br>
                                         </div></li>
+                                        <li><a href="donate.php" id="donate-button">Donate</a></li>
                                 </ul>
                               
                             </div>

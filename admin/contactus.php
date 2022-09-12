@@ -13,8 +13,9 @@ $email=$_POST['email'];
  $mobnum=$_POST['mobnum'];
  $pagetitle=$_POST['pagetitle'];
 $pagedes=$_POST['pagedes'];
+$fpagedes = mysqli_real_escape_string($con,$pagedes);
 
- $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes',Email='$email',MobileNumber='$mobnum' where  PageType='contactus'");
+ $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$fpagedes',Email='$email',MobileNumber='$mobnum' where  PageType='contactus'");
 
     if ($query) {
     

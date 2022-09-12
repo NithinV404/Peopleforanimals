@@ -7,6 +7,9 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People for animals | Volunteer </title>
 <link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -25,12 +28,17 @@ include('includes/dbconnection.php');
 			</div>
 			</div>
 	<!--about-->
+    <?php
+				$query = mysqli_query($con, "select * from  tblpage where PageType='volunteer'");
+				while ($row = mysqli_fetch_array($query)) {
+
+
+				?>
 	<section class="mbr-section content-article mbr-section__container" id="content1-35" style="background-color: rgb(255, 255, 255); padding-top: 40px; padding-bottom: 10px;">
     <div class="container" >
         <div class="row" >
             <div class="col-xs-12 col-md-12">
-                <p class="mbr-section-text text-1">Our volunteer programme is open to wildlife enthusiasts and those willing to train for a committed service - such as helping with intensive care, surgeries, and animal rescues in their area.</p>
-                <p class="mbr-section-text text-1">We’d like volunteers to truly gain when they spend time with us, while the organisation gains much needed assistance. Volunteers do have a responsibility - to protect and aid our urban wildlife, by advocacy, by reporting cruelty, and through participation.</p>
+                <p class="mbr-section-text text-1"><?php echo $row['PageDescription']; }?></p>
             </div>
         </div>
     </div>

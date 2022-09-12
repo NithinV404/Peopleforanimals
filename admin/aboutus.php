@@ -3,38 +3,36 @@ session_start();
 include('includes/dbconnection.php');
 error_reporting(0);
 if (strlen($_SESSION['zmsaid']==0)) {
-  header('location:logout.php');
-  } else{
+header('location:logout.php');
+} else{
     if(isset($_POST['submit']))
-  {
+{
 
 $aid=$_SESSION['zmsaid'];
- $pagetitle=$_POST['pagetitle'];
+$pagetitle=$_POST['pagetitle'];
 $pagedes=$_POST['pagedes'];
+$fpagedes = mysqli_real_escape_string($con,$pagedes);
 
- $query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$pagedes' where  PageType='aboutus'");
+$query=mysqli_query($con,"update tblpage set PageTitle='$pagetitle',PageDescription='$fpagedes' where  PageType='aboutus'");
 
     if ($query) {
     
-    echo '<script>alert("About Us has been updated.")</script>';
-  }
-  else
+    echo '<script>alert("About us has been updated.")</script>';
+ }
+else
     {
-    
-       echo '<script>alert("Something Went Wrong. Please try again.")</script>';
+        echo("Error description: " . $mysqli -> error);
     }
 
-  
 }
   ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>About Us- People for animals</title>
+    <title>About us - People for animals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -80,7 +78,7 @@ $pagedes=$_POST['pagedes'];
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">About</h4>
+                                        <h4 class="header-title">About us</h4>
 
 
                                         <form method="post" action="" name="">
@@ -97,7 +95,7 @@ while ($row=mysqli_fetch_array($ret)) {
                                             </div>
                                          <div class="form-group">
                                                 <label for="exampleInputEmail1">Page Description</label>
-                                                 <textarea  name="pagedes" required='true' cols="165" rows="10"><?php  echo $row['PageDescription'];?></textarea>
+                                                 <textarea  name="pagedes" required='true' cols="200" rows="70"><?php  echo $row['PageDescription'];?></textarea>
                                                 
                                             </div>
                                             

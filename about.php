@@ -8,6 +8,9 @@ include('includes/dbconnection.php');
 <html>
 
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>People for animals | About </title>
 	<link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -40,7 +43,7 @@ include('includes/dbconnection.php');
 		<!--advantage-->
 		<div class="advantages">
 			<div class="container" style="
-    box-shadow: 0 1px 50px 3px  rgb(148, 148, 148,0.3); border-radius:8px; padding:20px; margin-top:20px;">
+    box-shadow: 0 1px 50px 3px  rgb(148, 148, 148,0.3); border-radius:8px; padding-bottom:20px; margin-top:20px; box-sizing:content-box";>
 				<?php
 				$query = mysqli_query($con, "select * from  tblpage where PageType='aboutus'");
 				while ($row = mysqli_fetch_array($query)) {
@@ -50,10 +53,9 @@ include('includes/dbconnection.php');
 
 					<div class="advantages-grids">
 						<div class="col-md-12 advantage-grid">
-							<div class="advantage">
+							<div  style="text-align:left; border-radius: 10px;" class="advantage">
 								<h3><?php echo $row['PageTitle']; ?></h3>
-								<h1 class="mbr-section-title display-3 heading-title text-xs-center" style="margin-bottom: 10px;text-align: left;">Purpose:</h1><br>
-								<p style="text-align:left;"><?php echo $row['PageDescription']; ?>.</p>
+								<p><?php echo $row['PageDescription']; ?></p>
 
 								<div class="clearfix"></div>
 							</div>

@@ -7,6 +7,9 @@ include('includes/dbconnection.php');
 <!DOCTYPE HTML>
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People for animals | Contact </title>
 <link rel="icon" href="gif/funnygifsbox.com-2019-05-22-12-24-43-5.gif">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -39,12 +42,12 @@ include('includes/dbconnection.php');
 						
 						<div class="advantages-grids">
 							<div class="col-md-12 advantage-grid">
-								<div class="company_ad">
+								<div  style="text-align:left;" class="company_ad" style="box-sizing:content-box">
 							 <p>Reach out to us anytime, Our Voluteer and Members are ready to help you.
 People for Animals is here to help you with more information. </p>
 			      			<address>
-	 							 <p>Email : <?php  echo $row['Email'];?></p>
-								 <p>Phone : <?php  echo $row['MobileNumber'];?></p>
+	 							 <p><b>Email :</b> <?php  echo $row['Email'];?></p>
+								 <p><b>Phone : </b> <?php  echo $row['MobileNumber'];?></p>
 								 <p><?php  echo $row['PageDescription'];?></p>
 								<br>
 								<br>

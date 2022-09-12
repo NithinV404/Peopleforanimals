@@ -58,13 +58,13 @@ include('includes/dbconnection.php');
 
             <div class="form-group">
                 <label for="exampleInputPhone1">Phone number</label>
-                <input type="number" class="form-control" id="exampleInputPhone1" minlength="10" size="10" placeholder="Phone number" required>
+                <input type="tel" class="form-control" id="exampleInputPhone1" maxlength="10" placeholder="Phone number" required>
                 <small id="phonehelp" class="form-text text-muted">Enter your phone number</small>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputAddress1">Address</label>
-                <input type="tel" maxlength=10 class="form-control" id="exampleInputAddress1" placeholder="Address" required>
+                <input type="text" class="form-control" id="exampleInputAddress1" placeholder="Address" required>
                 <small id="phonehelp" class="form-text text-muted">Enter your address</small>
             </div>
 
@@ -129,8 +129,8 @@ include('includes/dbconnection.php');
                 <label class="form-check-label" for="exampleCheck1"> I agree terms and conditions</label>
             </div>
             <button type="submit" onclick="return confirm('Are you sure')" id="submit" class="c-btn btn-primary">Submit</button>
-        </div>
     </form>
+</div>
     <?php include_once('includes/special.php');?>
     <?php include_once('includes/footer.php'); ?></div>
 </body>
@@ -144,42 +144,37 @@ include('includes/dbconnection.php');
     var t_timing = $("#vol_timing");
     var t_commit_time = $("#vol_duration");
 
+    function check()
+    {
+        alert(t_phone.val());
+    }
+    
+
     var store = [];
     $("form").submit(function(){
     event.preventDefault();
-    var name = t_name.val();
-    var age = t_age.val();
-    var email = t_email.val();
-    var phone = t_phone.val();
-    var address = t_address.val();
-    var vol_type = t_vol_type.val();
-    var timing = t_timing.val();
-    var commit_time = t_commit_time.val();
 
-    window.location.href = "registration-success.php";
         var all_location_id = document.querySelectorAll('input[name="wh_day[]"]:checked');
         var aIds = [];
             for(var x = 0, l = all_location_id.length; x < l;  x++)
-            {
             aIds.push(all_location_id[x].value);
-            }
+
+
         var str = aIds.join(',');
         $.ajax({
         type:'POST',
         url:'volunteer-submit.php',
-        data:{name:name,
-            age:age,
-            email:email,
-            phone:phone,
-            address:address,
-            vol_type:vol_type,
-            timing:timing,
-            commit_time:commit_time,
+        data:{name:t_name.val(),
+            age:t_age.val(),
+            email:t_email.val(),
+            phone:t_phone.val(),
+            address:t_address.val(),
+            vol_type:t_vol_type.val(),
+            timing:t_timing.val(),
+            commit_time:t_commit_time.val(),
             weeks:str}
         })
-    console.log(vol_type)
+        window.location.href = "registration-success.php";
     })
-
-
 </script>
 </html>
