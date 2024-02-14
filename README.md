@@ -2,10 +2,10 @@
 
 ### Connecting abandoned animals with loving forever homes.
 ## Images
-![]('./images/screenshots/thorium_swSAAAYkuI.png')
-![]('./images/screenshots/thorium_YKM9vD4EIy.png')
-![]('./images/screenshots/thorium_8bF83fB8aN.png')
-![]('./images/screenshots/thorium_V0zK0M7acy.png')
+![ExampleImage1](./images/screenshots/thorium_swSAAAYkuI.png)
+![ExampleImage2](./images/screenshots/thorium_YKM9vD4EIy.png)
+![ExampleImage3](./images/screenshots/thorium_8bF83fB8aN.png)
+![ExampleImage4](./images/screenshots/thorium_V0zK0M7acy.png)
 
 ## Installation 
 - Download the zip
